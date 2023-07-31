@@ -1,0 +1,31 @@
+
+<div class="container">
+  <div class="row justify-content-center mt-5">
+    <div class="col-md-6">
+      <div class="card">
+        <div class="card-header">
+          <h4>Login</h4>
+        </div>
+        <div class="card-body">
+          <form class="login-block" (ngSubmit)="loginUser()">
+            <div class="form-group">
+              <label for="username">Username</label>
+              <input type="text" class="form-control" id="username" placeholder="Enter Username" [(ngModel)] = "model.username" name = "username">
+            </div>
+            &nbsp;
+            <div class="form-group">
+              <label for="password">Password</label>
+              <input type="password" class="form-control" id="password" placeholder="Enter Password" [(ngModel)] = "model.password" name = "password">
+            </div>
+            &nbsp; &nbsp;
+           <div class="form-group">
+            <button (click)="loginUser()" type="submit"  class="btn btn-secondary">Log in</button>
+           </div>
+           Forgot Password?
+           <a href="/register" style="color: rgba(46, 16, 195, 0.799);">Click Here</a>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

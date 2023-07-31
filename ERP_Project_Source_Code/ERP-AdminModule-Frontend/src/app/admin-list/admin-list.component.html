@@ -1,0 +1,46 @@
+<br>
+<!-- <button type="button" class="btn btn-secondary">
+    <a routerLink="/admins" routerLinkActive="active" class="nav-link text-white" >User List</a>
+</button>
+&nbsp;&nbsp; -->
+<button type="button" class="btn btn-secondary">
+    <a routerLink="/create-admin" routerLinkActive="active" class="nav-link text-white" >Add User</a>
+</button>
+<br>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Firstname</th>
+            <th>Lastname</th>
+            <th>Username</th>
+            <!-- <th>Email</th>
+            <th>Phonenumber</th>
+            <th>Dob</th>
+            <th>Department</th> -->
+            <th>Actions</th>
+            <!-- <th>Password</th>
+            <th>Confirm Password</th> -->
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let admin of admins">
+            <td>{{ admin.id }}</td>
+            <td>{{ admin.firstname }}</td>
+            <td>{{ admin.lastname }}</td>
+            <td>{{admin.username}}</td>
+            <!-- <td>{{ admin.email }}</td>
+            <td>{{ admin.phonenumber }}</td>
+            <td>{{ admin.dob }}</td>
+            <td>{{ admin.department }}</td> -->
+            <td>
+                <button (click)="viewAdmin(admin.id)" class="btn btn-warning">View</button>&nbsp; &nbsp; 
+                <button (click)="updateAdmin(admin.id)" class="btn btn-secondary">Update</button> &nbsp; &nbsp;
+                <button (click)="deleteAdmin(admin.id)" class="btn btn-danger">Delete</button>
+                
+            </td>
+             <!-- <td>{{ admin.password }}</td>
+            <td>{{ admin.confirm_password }}</td> -->
+        </tr>
+    </tbody>
+</table>

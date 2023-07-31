@@ -1,0 +1,58 @@
+<h3 class="text-center">Update the User Details here..</h3>
+<div class="col-md-5 offset-md-3">
+<form (ngSubmit) = "onSubmit()">
+
+    <div class="form-group">
+        <label>First name</label>
+        <input type="text" class="form-control" id = "Firstname" [(ngModel)] = "admin.firstname" name = "Firstname">
+    </div>
+
+    <div class="form-group">
+        <label>Last name</label>
+        <input type="text" class="form-control" id = "Lastname" [(ngModel)] = "admin.lastname" name = "Lastname">
+    </div>
+
+    <div class="form-group">
+        <label>Username</label>
+        <input type="text" class="form-control" id = "Username" [(ngModel)] = "admin.username" name = "Username">
+    </div>
+
+    <div class="form-group">
+        <label>Email</label>
+        <input type="text" class="form-control" id = "Email" [(ngModel)] = "admin.email" name = "Email">
+    </div>
+
+    <div class="form-group">
+        <label>Phonenumber</label>
+        <input type="text" class="form-control" id = "Phonenumber" [(ngModel)] = "admin.phonenumber" name = "Phonenumber">
+    </div>
+
+    <div class="form-group">
+        <label>Date of Birth</label>
+        <input type="text" class="form-control" id = "Dob" [(ngModel)] = "admin.dob" name = "Dob">
+    </div>
+
+    <div class="form-group">
+        <label>Department</label>
+        <input type="text" class="form-control" id = "Department" [(ngModel)] = "admin.department" name = "Department">
+    </div>
+
+    <div class="form-group">
+        <label>Password</label>
+        <input type="text" class="form-control" id = "Password" [(ngModel)] = "admin.password" name = "Password">
+    </div>
+
+    <div class="form-group">
+        <label>Confirm Password</label>
+        <input type="text" class="form-control" id = "Confirm Password" [(ngModel)] = "admin.confirmpassword" name = "ConfirmPassword">
+    </div>
+    <br>
+    <button class="btn btn-success" type="submit">Update User Details</button>
+    &nbsp; &nbsp;
+    <button class="btn btn-danger" type="reset">Reset the Details</button>
+    &nbsp; &nbsp;
+    <button type="button" class="btn btn-secondary">
+        <a routerLink="/admins" routerLinkActive="active" class="nav-link text-white" >User List</a>
+    </button>
+</form>
+</div>

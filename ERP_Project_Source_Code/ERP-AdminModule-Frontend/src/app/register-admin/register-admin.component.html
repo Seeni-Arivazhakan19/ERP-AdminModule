@@ -1,0 +1,72 @@
+<h3 class="row justify-content-center mt-2">Registration Page</h3>
+<div class="col-md-5 offset-md-3">
+    <form #myForm ="ngForm"(ngSubmit) = "onSubmit()">
+    
+        <div class="form-group">
+            <label>First name</label>
+            <input type="text" id ="firstname" placeholder="Enter Firstname" class="form-control" [(ngModel)] = "admin.firstname" name = "firstname" required #firstname = "ngModel" [class.is-invalid]="firstname.invalid && firstname.touched">
+             <small class="text-danger" [class.d-none]="firstname.valid || firstname.untouched">Firstname is required</small>
+        </div>
+    
+        <div class="form-group">
+            <label>Last name</label>
+            <input type="text" id="lastname" placeholder="Enter Lastname" class="form-control" [(ngModel)] = "admin.lastname" name = "Lastname" required #lastname = "ngModel" [class.is-invalid]="lastname.invalid && lastname.touched">
+            <small class="text-danger" [class.d-none]="lastname.valid || lastname.untouched">Lastname is required</small>
+        </div>
+    
+        <div class="form-group">
+            <label>Username</label>
+            <input type="text" class="form-control" placeholder="Enter Username" id="username" [(ngModel)] ="admin.username" name = "Username" required #username = "ngModel" [class.is-invalid]="username.invalid && username.touched">
+            <small class="text-danger" [class.d-none]="username.valid || username.untouched">Username is required</small>
+        </div>
+    
+        <div class="form-group">
+            <label>Email</label>
+            <input type="email" class="form-control" id = "email" placeholder="Enter mailId" [(ngModel)] = "admin.email" name = "Email" required #email = "ngModel" [class.is-invalid]="email.invalid && email.touched">
+            <small class="text-danger" [class.d-none]="email.valid || email.untouched">Email is required</small>
+        </div>
+    
+        <div class="form-group">
+            <label>Phonenumber</label>
+            <input type="text" class="form-control" id = "phonenumber" placeholder="Enter Phonenumber" [(ngModel)] = "admin.phonenumber" name = "Phonenumber" required #phonenumber = "ngModel" [class.is-invalid]="phonenumber.invalid && phonenumber.touched">
+            <small class="text-danger" [class.d-none]="phonenumber.valid || phonenumber.untouched">Phonenumber is required</small>
+        </div>
+    
+        <div class="form-group">
+            <label>Date of Birth</label>
+            <input type="date" class="form-control" id = "dob" placeholder="Enter Date of Birth" [(ngModel)] = "admin.dob" name = "Dob" required #dob = "ngModel" [class.is-invalid]="dob.invalid && dob.touched">
+            <small class="text-danger" [class.d-none]="dob.valid || dob.untouched">Date Of Birth is required</small>
+        </div>
+    
+        <div class="form-group">
+            <label for="dropdown">Select Domain:</label>
+            <select class="form-control" id="dropdown" formControlName="dropdown" [(ngModel)] = "admin.department" name="department" required>
+            <option selected>-- Select --</option>
+            <option value="Java">Java</option>
+            <option value="DevOps">DevOps</option>
+            <option value="DotNet">Dotnet</option>
+        </select>
+            <!-- <small class="text-danger" [class.d-none]="department.valid || department.untouched">Domain name is required</small> -->
+        </div>
+    
+        <div class="form-group">
+            <label>Password</label>
+            <input type="text" class="form-control" id = "password" placeholder="Enter Password" [(ngModel)] = "admin.password" name = "Password" required #password = "ngModel" [class.is-invalid]="password.invalid && password.touched">
+            <small class="text-danger" [class.d-none]="password.valid || password.untouched">Password is required</small>
+        </div>
+    
+        <div class="form-group">
+            <label>Confirm Password</label>
+            <input type="text" class="form-control" id = "confirmpassword" placeholder="Enter Confirm Password" [(ngModel)] = "admin.confirmpassword" name = "ConfirmPassword" required #confirmpassword = "ngModel" [class.is-invalid]="confirmpassword.invalid && confirmpassword.touched">
+            <small class="text-danger" [class.d-none]="confirmpassword.valid || confirmpassword.untouched">Confirm password is required</small>
+        </div>
+        <br>
+        <button class="btn btn-success" type="submit" [disabled]="myForm.form.invalid">Register</button>
+        &nbsp; &nbsp;
+        <button class="btn btn-danger" type="reset">Reset Details</button>
+        &nbsp; &nbsp;
+        <br>
+        Already have an account?
+        <a href="/" style="color: rgba(46, 16, 195, 0.799);">Click Here</a>
+    </form>
+    </div>
